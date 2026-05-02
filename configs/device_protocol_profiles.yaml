@@ -1,0 +1,50 @@
+device_classes:
+  soil_probe:
+    preferred_protocols:
+      - sdi12
+      - lorawan
+      - modbus_rtu
+    observed_properties:
+      - soil_moisture_pct
+      - soil_ec_us_cm
+      - soil_temp_c
+
+  weather_station:
+    preferred_protocols:
+      - sdi12
+      - lorawan
+      - modbus_rtu
+    observed_properties:
+      - air_temp_c
+      - air_humidity_pct
+      - rain_mm
+      - wind_speed_ms
+      - wind_direction_deg
+      - barometric_pressure_hpa
+
+  flow_meter:
+    preferred_protocols:
+      - pulse
+      - modbus_rtu
+      - modbus_tcp
+      - lorawan
+      - analog_4_20ma
+    observed_properties:
+      - flow_rate_m3_h
+      - flow_total_m3
+
+bridges:
+  lorawan_to_backend:
+    recommended_paths:
+      - the_things_stack_mqtt
+      - webhook_to_mapper
+
+  wired_to_lorawan:
+    recommended_devices:
+      - milesight_uc300
+      - milesight_uc100
+
+  sdi12_to_edge:
+    recommended_paths:
+      - edge_logger_to_mqtt
+      - edge_logger_to_sensorthings

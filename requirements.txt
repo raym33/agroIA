@@ -1,0 +1,11 @@
+pandas>=2.2
+numpy>=1.26
+scikit-learn>=1.5
+joblib>=1.4
+requests>=2.32
+ultralytics>=8.3
+opencv-python-headless>=4.10
+streamlit>=1.45
+openpyxl>=3.1
+catboost>=1.2
+xgboost>=2.1

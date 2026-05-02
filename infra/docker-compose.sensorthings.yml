@@ -1,0 +1,44 @@
+services:
+  frost_server:
+    image: fraunhoferiosb/frost-server:latest
+    container_name: agro_frost_server
+    restart: unless-stopped
+    environment:
+      serviceRootUrl: http://localhost:8089/FROST-Server
+      plugins_modelLoader_enable: "true"
+      plugins_multiDatastream_enable: "true"
+      plugins_actuation_enable: "false"
+      http_cors_enable: "true"
+      http_cors_allowed_origins: "*"
+      persistence_db_driver: org.postgresql.Driver
+      persistence_db_url: jdbc:postgresql://frost_database:5432/sensorthings
+      persistence_db_username: sensorthings
+      persistence_db_password: sensorthings_dev_password
+      persistence_autoUpdateDatabase: "true"
+    ports:
+      - "127.0.0.1:8089:8080"
+      - "127.0.0.1:1884:1883"
+    depends_on:
+      frost_database:
+        condition: service_healthy
+
+  frost_database:
+    image: postgis/postgis:16-3.4-alpine
+    container_name: agro_frost_postgis
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: sensorthings
+      POSTGRES_USER: sensorthings
+      POSTGRES_PASSWORD: sensorthings_dev_password
+    ports:
+      - "127.0.0.1:55432:5432"
+    volumes:
+      - agro_frost_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -d sensorthings -U sensorthings"]
+      interval: 10s
+      timeout: 5s
+      retries: 8
+
+volumes:
+  agro_frost_pgdata:

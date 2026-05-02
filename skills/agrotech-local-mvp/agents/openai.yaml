@@ -1,0 +1,3 @@
+display_name: AgroTech Local MVP
+short_description: Build local-first agrotech apps with irrigation, pest risk, sensors, and data onboarding.
+default_prompt: Build or extend a local-first precision agriculture MVP with irrigation recommendations, pest risk, spreadsheet ingestion, open sensor interoperability, and a cautious LLM explanation layer.
