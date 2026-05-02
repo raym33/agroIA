@@ -73,7 +73,8 @@ Optional language/vision layer:
 ## Quick start
 
 ```bash
-cd "/Users/c/Desktop/carpeta sin título 2/agricultura"
+git clone https://github.com/raym33/agroIA.git
+cd agroIA
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
@@ -191,7 +192,7 @@ Start with Murcia and Spain-specific sources before expanding scope.
 
 Recommended protocol-first hardware profiles are documented in:
 
-- [docs/compatible_hardware.md](/Users/c/Desktop/carpeta sin título 2/agricultura/docs/compatible_hardware.md)
+- [docs/compatible_hardware.md](docs/compatible_hardware.md)
 
 Practical guidance:
 
@@ -209,15 +210,15 @@ The repo already includes a scaffold for:
 
 See:
 
-- [docs/agro_data_platform.md](/Users/c/Desktop/carpeta sin título 2/agricultura/docs/agro_data_platform.md)
-- [infra/README.md](/Users/c/Desktop/carpeta sin título 2/agricultura/infra/README.md)
+- [docs/agro_data_platform.md](docs/agro_data_platform.md)
+- [infra/README.md](infra/README.md)
 
 ## Open gaps before a serious pilot
 
 The repository includes a working scaffold, not a finished production product. The main missing pieces are tracked in:
 
-- [docs/implementation_gaps.md](/Users/c/Desktop/carpeta sin título 2/agricultura/docs/implementation_gaps.md)
-- [docs/sources_and_datasets.md](/Users/c/Desktop/carpeta sin título 2/agricultura/docs/sources_and_datasets.md)
+- [docs/implementation_gaps.md](docs/implementation_gaps.md)
+- [docs/sources_and_datasets.md](docs/sources_and_datasets.md)
 
 High-priority gaps:
 
@@ -231,14 +232,14 @@ High-priority gaps:
 ## Farmer onboarding assets
 
 - Excel template: `templates/farmer_data_template_mvp.xlsx`
-- Interview questionnaire: [docs/farmer_discovery_questionnaire.md](/Users/c/Desktop/carpeta sin título 2/agricultura/docs/farmer_discovery_questionnaire.md)
+- Interview questionnaire: [docs/farmer_discovery_questionnaire.md](docs/farmer_discovery_questionnaire.md)
 
 ## Reusable skill
 
 This repo also includes a reusable Codex/Claude-style skill to accelerate future projects of the same type:
 
-- [skills/agrotech-local-mvp/SKILL.md](/Users/c/Desktop/carpeta sin título 2/agricultura/skills/agrotech-local-mvp/SKILL.md)
+- [skills/agrotech-local-mvp/SKILL.md](skills/agrotech-local-mvp/SKILL.md)
 
 ## License
 
-MIT. See [LICENSE](/Users/c/Desktop/carpeta sin título 2/agricultura/LICENSE).
+MIT. See [LICENSE](LICENSE).

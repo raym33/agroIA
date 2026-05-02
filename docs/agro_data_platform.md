@@ -48,8 +48,8 @@ What it solves:
 
 Local references:
 
-- [infra/docker-compose.sensorthings.yml](/Users/c/Desktop/carpeta sin título 2/agricultura/infra/docker-compose.sensorthings.yml)
-- [infra/sensorthings/README.md](/Users/c/Desktop/carpeta sin título 2/agricultura/infra/sensorthings/README.md)
+- [infra/docker-compose.sensorthings.yml](../infra/docker-compose.sensorthings.yml)
+- [infra/sensorthings/README.md](../infra/sensorthings/README.md)
 
 ### 4. Agronomic data sources to integrate
 

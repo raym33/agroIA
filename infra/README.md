@@ -10,7 +10,7 @@ This folder prepares the recommended stack for the next two weeks of practical i
 ## Start the operational data stack
 
 ```bash
-cd "/Users/c/Desktop/carpeta sin título 2/agricultura/infra"
+cd infra
 docker compose -f docker-compose.agro-stack.yml up -d
 ```
 
@@ -22,7 +22,7 @@ Available services:
 ## Start the optional SensorThings stack
 
 ```bash
-cd "/Users/c/Desktop/carpeta sin título 2/agricultura/infra"
+cd infra
 docker compose -f docker-compose.sensorthings.yml up -d
 ```
 
